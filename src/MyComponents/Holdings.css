@@ -8,13 +8,14 @@
     padding: 50px;
 
 }
-.Stocklist{
-    overflow-y: scroll;
-}
+
 .Stocklist::-webkit-scrollbar {
     display: none;
 }
-.sublist{
+
+.Stocklist{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: scroll;
 }

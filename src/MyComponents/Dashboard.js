@@ -6,6 +6,7 @@ import Holdings from './Holdings'
 import News from './News'
 import Notifications from './Notifications'
 export default function Dashboard() {
+ 
     return (
         <>
             <Header/>
@@ -38,7 +39,7 @@ export default function Dashboard() {
                                 <h6>Portfolio</h6>
                         </div>
                     </div>
-                    <Holdings/>                   
+                    <News/>                   
                 </div>
             </div>
             

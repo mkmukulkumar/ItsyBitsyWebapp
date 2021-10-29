@@ -1,0 +1,35 @@
+.stockholdinglist{
+    display: flex;
+    background-color: rgb(238, 247, 255);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    justify-content: space-between;
+    padding:15px;
+    border-radius: 10px;
+}
+.listsingleentry{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    align-items: center;
+    justify-content: center;
+}
+.entryheading{
+    font-size: small;
+    font-weight: 700;
+}
+.Notficationsingleentry{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-grow: 1;
+    align-items: center;
+  
+}
+.Notficationsingleentry button{
+    width: 70px;
+    margin-left: 10px;
+    font-size: small;
+
+}

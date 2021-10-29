@@ -1,24 +1,55 @@
 import React from 'react'
 import "./Holdings.css"
+import { NotificationItem } from './Notification Item'
 export default function Notifications() {
+    let Notificationslist=[
+        {
+            notify:"Sell",
+            stock:"IEX",
+            price:102,
+            qty:200,
+        },
+        {
+            notify:"Buy",
+            stock:"Reliance",
+            price:2302,
+            qty:9,
+        },
+        {
+            notify:"Buy",
+            stock:"HUL",
+            price:2102,
+            qty:22,
+        },
+        {
+            notify:"Buy",
+            stock:"TATA",
+            price:202,
+            qty:20,
+        },
+        {
+            notify:"Buy",
+            stock:"Reliance",
+            price:2302,
+            qty:9,
+        },
+        {
+            notify:"Buy",
+            stock:"HUL",
+            price:2102,
+            qty:22,
+        },
+        
+    ]  
     return (
         <>
+           
             <div className="holdingcontainer">
-                <h3>Notifications</h3> 
+                <h3>Notifications for Today</h3> 
                 <div className="Stocklist">
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">Tata</li>
-                        <li className="list-group-item">Reliance</li>
-                        <li className="list-group-item">HUL</li>
-                        <li className="list-group-item">JSW Steel</li>
-                        <li className="list-group-item">IEX</li>
-                        <li className="list-group-item">Adani</li>
-                        <li className="list-group-item">Birlasoft</li>
-                        <li className="list-group-item">IRCTC</li>
-                        <li className="list-group-item">Sun Pharma</li>
-                        <li className="list-group-item">NTPC</li>
-                        
-                    </ul>
+                    {Notificationslist.map((Notificationslist)=>{
+                        return <NotificationItem Notificationslist={Notificationslist}/>
+                    })}
                 </div>
             </div>
         </>    
