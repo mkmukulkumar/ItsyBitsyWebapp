@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="463.52" height="531.501" viewBox="0 0 463.52 531.501">
+  <g id="Group_43" data-name="Group 43" transform="translate(-373.5 -301.5)">
+    <g id="Group_42" data-name="Group 42" transform="translate(373.5 301.5)">
+      <text id="ITS" transform="translate(211 248.157)" fill="#fff" font-size="144" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-210.727" y="0">ITS</tspan></text>
+      <text id="FINANCE" transform="translate(215.583 506.501)" fill="#fff" font-size="99" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-211.68" y="0">FINANCE</tspan></text>
+      <text id="Y" transform="translate(427.561 408)" fill="#fff" font-size="378" font-family="SegoeUI, Segoe UI"><tspan x="-208.934" y="0">Y</tspan></text>
+      <text id="BITS" transform="translate(255 394.348)" fill="#fff" font-size="121" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-254.644" y="0">BITS</tspan></text>
+      <path id="Polygon_1" data-name="Polygon 1" d="M40.308,0,80.617,73.451H0Z" transform="matrix(0.899, 0.438, -0.438, 0.899, 391.062, 86.791)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

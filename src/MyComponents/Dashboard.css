@@ -1,0 +1,68 @@
+.mastercontainer{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+.semimaincontainerI{
+    margin-top:30px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+.hellocontainer{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    background-color: #9100FF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items:center ;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(34, 35, 58, 0.2)
+}
+.semimaincontainerII{
+    margin-left: 30px;
+    margin-top:30px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+.masterportfolio{
+    justify-content:space-between;
+    display: flex;
+    flex-direction: row;
+}
+.portfoliocontainer{
+    display: flex;
+    padding: 10px;
+    height: 15vh;
+    
+    flex-grow: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgba(34, 35, 58, 0.2)
+}
+.percentcontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 15vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex-shrink: 1;
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgb(80, 184, 136);
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(34, 35, 58, 0.2)
+}
