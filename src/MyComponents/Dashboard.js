@@ -39,7 +39,7 @@ export default function Dashboard() {
                                 <h6>Portfolio</h6>
                         </div>
                     </div>
-                    <News/>                   
+                    <Holdings/>                   
                 </div>
             </div>
             
