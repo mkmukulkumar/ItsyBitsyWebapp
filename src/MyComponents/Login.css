@@ -29,7 +29,6 @@ form{
 .img{
    display: flex;
    width: 50%;
-   /* background-color: blueviolet; */
    background-image: linear-gradient(rgb(160, 59, 255), rgb(1, 4, 90));
    border-radius: 15px 0px 0px 15px;
    justify-content: center;

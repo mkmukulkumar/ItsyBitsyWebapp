@@ -14,14 +14,10 @@ export default function Signup() {
                 <h3>Sign Up</h3>
 
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
+                    <label>Full name</label>
+                    <input type="text" className="form-control" placeholder="Full name" />
                 </div>
 
-                <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
-                </div>
 
                 <div className="form-group">
                     <label>Email address</label>
@@ -30,6 +26,11 @@ export default function Signup() {
 
                 <div className="form-group">
                     <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" />
+                </div>
+
+                <div className="form-group">
+                    <label>Confirm Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" />
                 </div>
                 

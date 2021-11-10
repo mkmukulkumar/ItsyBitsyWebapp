@@ -34,4 +34,4 @@ function Dashboardpage() {
 }
 
 
-export default Dashboardpage;
+export default Signuppage;
