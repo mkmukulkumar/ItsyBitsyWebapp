@@ -5,6 +5,7 @@ const app = express()
 dotenv.config({path:'./config.env'})
 require('./db/conn')
 
+//to use and show json format 
 app.use(express.json())
 
 app.use(require('./router/auth'))
