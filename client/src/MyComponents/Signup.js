@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './Signup.css';
 import logo from '../logo.svg'
 export default function Signup() {
@@ -36,7 +37,7 @@ export default function Signup() {
                 
                 <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
                 <p className="forgot-password">
-                    Already registered <a href="#">sign in?</a>
+                    Already registered <NavLink to="/login">sign in?</NavLink>
                 </p>
             </form>
         </div>

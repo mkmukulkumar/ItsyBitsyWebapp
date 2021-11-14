@@ -16,6 +16,7 @@
     flex-direction: column;
     height: 15vh;
     background-color: #9100FF;
+    /* background-image: linear-gradient(rgb(160, 59, 255), rgb(1, 4, 90)); */
     padding-top: 10px;
     padding-bottom: 10px;
     align-items:center ;

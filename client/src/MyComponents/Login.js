@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './Login.css';
 import logo from '../logo.svg'
 export default function Login() {
@@ -31,12 +32,12 @@ export default function Login() {
             </div>
             
             <button type="submit" className="btn btn-primary btn-block">Sign In</button>
-            <a className="forgot-password"href="#"> 
+            <NavLink className="forgot-password" to="/signup"> 
                     Create New Account
-            </a>
-            <a className="forgot-password"href="#"> 
+            </NavLink>
+            <NavLink className="forgot-password" to="#"> 
                     Forgot password?
-            </a>
+            </NavLink>
         </form>
         </div>
     </div>

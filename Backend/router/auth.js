@@ -1,20 +1,21 @@
 const express = require('express')
 const router = express.Router()
+const jwt = require('jsonwebtoken')
 const bcrypt= require('bcryptjs')
 require('../db/conn')
 const User = require('../model/userSchema')
 
-const middleware=(req,res,next) => {
-    console.log('hello my middleware');
+// const middleware=(req,res,next) => {
+//     console.log('hello my middleware');
    
-    next();
-  }
+//     next();
+//   }
 
-router.get('/', (req, res) => {
-    res.send('Hello World from server routerjs!')
-})
+// router.get('/', (req, res) => {
+//     res.send('Hello World from server routerjs!')
+// })
 
-router.post('/register',async (req,res)=>{
+router.post('/signup',async (req,res)=>{
 
     const {name, email, password, cpassword} = req.body
     if(!name || !email || !password || !cpassword){
@@ -42,10 +43,11 @@ router.post('/register',async (req,res)=>{
         // res.json({message:req.body})
 })
 
-router.post('/signin', async (req, res) => {
+router.post('/login', async (req, res) => {
     // console.log(req.body)
     // res.json({message:"Awesome"})
     try{
+        let token;
         const {email , password}=req.body
         if(! email || !password){
             return res.status(400).json({error:"Plz fill the data"})
@@ -57,7 +59,14 @@ router.post('/signin', async (req, res) => {
         if(userLogin){
             const isMatch = await bcrypt.compare(password, userLogin.password)      
             
+            token = await userLogin.generateAuthToken()
+            console.log(token)
             
+            res.cookie("jwtoken",token,{
+                expires:new Date(Date.now()+25892000000),
+                httpOnly:true
+            })
+
             if(!isMatch){
                 res.status(400).json({message:"Invalid Credentials"})
             } else{
@@ -73,25 +82,25 @@ router.post('/signin', async (req, res) => {
 })
 
 
-router.get('/login',middleware, (req, res) => {
-    res.send('Hello login World!')
-})
+// router.get('/signin',middleware, (req, res) => {
+//     res.send('Hello login World!')
+// })
 
-router.get('/signup', (req, res) => {
-res.send('Hello signup World!')
-})
+// router.get('/signup', (req, res) => {
+// res.send('Hello signup World!')
+// })
 
-router.get('/Holdings', (req, res) => {
-res.send('Hello holdings World!')
-})
+// router.get('/Holdings', (req, res) => {
+// res.send('Hello holdings World!')
+// })
 
-router.get('/News', (req, res) => {
-res.send('Hello news World!')
-})
+// router.get('/News', (req, res) => {
+// res.send('Hello news World!')
+// })
 
-router.get('/Notifications', (req, res) => {
-res.send('Hello notifications World!')
-})
+// router.get('/Notifications', (req, res) => {
+// res.send('Hello notifications World!')
+// })
   
 
 

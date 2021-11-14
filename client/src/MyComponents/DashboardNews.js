@@ -2,10 +2,8 @@ import React from 'react'
 import Header from './Header'
 import './Dashboard.css'
 import Buysellform from './Buysellform'
-import Holdings from './Holdings'
 import News from './News'
-import Notifications from './Notifications'
-export default function Dashboard() {
+export default function DashboardNews() {
  
     return (
         <>
@@ -39,7 +37,7 @@ export default function Dashboard() {
                                 <h6>Portfolio</h6>
                         </div>
                     </div>
-                    <Holdings/>                   
+                    <News/>                   
                 </div>
             </div>
             
