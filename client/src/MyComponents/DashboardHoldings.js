@@ -1,9 +1,64 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import {  useNavigate } from 'react-router-dom';
 import Header from './Header'
 import './Dashboard.css'
 import Buysellform from './Buysellform'
 import Holdings from './Holdings'
+import axios from 'axios'
+
 export default function DashboardHoldings() {
+
+    const navigate=useNavigate()
+
+    const callHomePage=async()=>{
+
+        try{
+            
+            const res=await fetch('http://localhost:5000',{
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },          
+            });
+            const UserData = await res.json()
+            console.log(UserData)
+            
+
+            if(res.status!==200){
+                const error = new Error(res.error)
+                throw error
+            }
+        }
+        catch(err){
+            window.alert(err)
+            console.log(err)
+            navigate('/login')
+        }
+
+    }
+
+
+    // const callHomePage = async () => {
+    //     try {
+    //         const res = await fetch("http://localhost:5000/");
+
+    //         const user = await res.json();
+    //         // setUserData({ ...userData, name: user.name, email: user.email, phone: user.phone });
+
+    //         if (!res.status === 200) {
+    //             const error = new Error(res.error);
+    //             throw error;
+    //         }
+
+    //     } catch (err) {
+    //         window.alert(err)
+    //     }
+    // }
+
+
+    useEffect(()=>{
+        callHomePage()
+    },[])
  
     return (
         <>

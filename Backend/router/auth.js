@@ -2,24 +2,24 @@ const express = require('express')
 const router = express.Router()
 const jwt = require('jsonwebtoken')
 const bcrypt= require('bcryptjs')
+const authenticate =require("../middleware/authenticate")
+
 require('../db/conn')
 const User = require('../model/userSchema')
 
-// const middleware=(req,res,next) => {
-//     console.log('hello my middleware');
-   
-//     next();
-//   }
 
-// router.get('/', (req, res) => {
-//     res.send('Hello World from server routerjs!')
-// })
+// const middleware = (req, res, next) =>{
+    
+//    console.log("HII")
+//    next()
+// }
 
-router.post('/signup',async (req,res)=>{
+
+router.post("/signup",async (req,res)=>{
 
     const {name, email, password, cpassword} = req.body
     if(!name || !email || !password || !cpassword){
-        return res.status(422).json({error:"Plz fill All the details"})
+        return res.status(422).json({error:"Details Empty"})
     }
 
     try{
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
         let token;
         const {email , password}=req.body
         if(! email || !password){
-            return res.status(400).json({error:"Plz fill the data"})
+            return res.status(400).json({error:"Details Empty"})
         }
         
         const userLogin = await User.findOne({email:email})
@@ -60,7 +60,7 @@ router.post('/login', async (req, res) => {
             const isMatch = await bcrypt.compare(password, userLogin.password)      
             
             token = await userLogin.generateAuthToken()
-            console.log(token)
+            // console.log(token)
             
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+25892000000),
@@ -82,23 +82,13 @@ router.post('/login', async (req, res) => {
 })
 
 
-// router.get('/signin',middleware, (req, res) => {
-//     res.send('Hello login World!')
-// })
 
-// router.get('/signup', (req, res) => {
-// res.send('Hello signup World!')
-// })
+router.get("/", authenticate, (req, res) => {
+    res.send(req.rootUser);
+})
 
-// router.get('/Holdings', (req, res) => {
-// res.send('Hello holdings World!')
-// })
 
-// router.get('/News', (req, res) => {
-// res.send('Hello news World!')
-// })
-
-// router.get('/Notifications', (req, res) => {
+// router.get('/notifications', (req, res) => {
 // res.send('Hello notifications World!')
 // })
   

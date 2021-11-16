@@ -4,48 +4,48 @@ import "./Holdings.css"
 
 export default function Holdings() {
     let stockholdings=[
-        {
-            sno:1,
-            stock:"TATA",
-            cmp:231,
-            avgprice:202,
-            qty:20,
-        },
-        {
-            sno:2,
-            stock:"Reliance",
-            cmp:2102,
-            avgprice:2302,
-            qty:9,
-        },
-        {
-            sno:3,
-            stock:"HUL",
-            cmp:2231,
-            avgprice:2102,
-            qty:22,
-        },
-        {
-            sno:1,
-            stock:"TATA",
-            cmp:231,
-            avgprice:202,
-            qty:20,
-        },
-        {
-            sno:2,
-            stock:"Reliance",
-            cmp:2102,
-            avgprice:2302,
-            qty:9,
-        },
-        {
-            sno:3,
-            stock:"HUL",
-            cmp:2231,
-            avgprice:2102,
-            qty:22,
-        },
+        // {
+        //     sno:1,
+        //     stock:"TATA",
+        //     cmp:231,
+        //     avgprice:202,
+        //     qty:20,
+        // },
+        // {
+        //     sno:2,
+        //     stock:"Reliance",
+        //     cmp:2102,
+        //     avgprice:2302,
+        //     qty:9,
+        // },
+        // {
+        //     sno:3,
+        //     stock:"HUL",
+        //     cmp:2231,
+        //     avgprice:2102,
+        //     qty:22,
+        // },
+        // {
+        //     sno:1,
+        //     stock:"TATA",
+        //     cmp:231,
+        //     avgprice:202,
+        //     qty:20,
+        // },
+        // {
+        //     sno:2,
+        //     stock:"Reliance",
+        //     cmp:2102,
+        //     avgprice:2302,
+        //     qty:9,
+        // },
+        // {
+        //     sno:3,
+        //     stock:"HUL",
+        //     cmp:2231,
+        //     avgprice:2102,
+        //     qty:22,
+        // },
         
     ]  
     return (
